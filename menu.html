@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - PizzaExpress</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red-600 shadow-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-2xl" href="index.html">
+                <i class="fas fa-pizza-slice me-2"></i>PizzaExpress
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            Cart <span id="cart-count" class="badge bg-warning text-dark">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order-tracking.html">Track Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="py-12 bg-red-600 text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold mb-4">Our Delicious Menu</h1>
+                    <p class="lead">Crafted with love, delivered with care</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Filters -->
+    <section class="py-6 bg-white sticky-top shadow-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-red active" data-filter="all">All Items</button>
+                            <button type="button" class="btn btn-outline-red" data-filter="pizzas">Pizzas</button>
+                            <button type="button" class="btn btn-outline-red" data-filter="appetizers">Appetizers</button>
+                            <button type="button" class="btn btn-outline-red" data-filter="drinks">Drinks</button>
+                            <button type="button" class="btn btn-outline-red" data-filter="desserts">Desserts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="py-12">
+        <div class="container">
+            <!-- Pizzas Section -->
+            <div class="menu-category" data-category="pizzas">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center" id="pizzas">
+                    <i class="fas fa-pizza-slice text-red-600 me-3"></i>Artisan Pizzas
+                </h2>
+                <div class="row g-4 mb-12">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Margherita Pizza">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title fw-bold">Classic Margherita</h5>
+                                    <span class="badge bg-success">Vegetarian</span>
+                                </div>
+                                <p class="card-text text-gray-600 mb-3">Fresh tomatoes, premium mozzarella, fresh basil, olive oil</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="pizza-sizes">
+                                        <small class="text-muted">Small: $12.99 | Medium: $14.99 | Large: $16.99</small>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="btn-group w-100" role="group">
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Classic Margherita" data-price="12.99" data-size="Small">Small</button>
+                                        <button class="btn btn-red btn-sm add-to-cart" data-name="Classic Margherita" data-price="14.99" data-size="Medium">Medium</button>
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Classic Margherita" data-price="16.99" data-size="Large">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Pepperoni Pizza">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title fw-bold">Pepperoni Supreme</h5>
+                                    <span class="badge bg-warning text-dark">Popular</span>
+                                </div>
+                                <p class="card-text text-gray-600 mb-3">Premium pepperoni, mozzarella cheese, tomato sauce</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="pizza-sizes">
+                                        <small class="text-muted">Small: $14.99 | Medium: $16.99 | Large: $18.99</small>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="btn-group w-100" role="group">
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Pepperoni Supreme" data-price="14.99" data-size="Small">Small</button>
+                                        <button class="btn btn-red btn-sm add-to-cart" data-name="Pepperoni Supreme" data-price="16.99" data-size="Medium">Medium</button>
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Pepperoni Supreme" data-price="18.99" data-size="Large">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Veggie Pizza">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title fw-bold">Garden Veggie Deluxe</h5>
+                                    <span class="badge bg-success">Vegetarian</span>
+                                </div>
+                                <p class="card-text text-gray-600 mb-3">Bell peppers, mushrooms, olives, onions, tomatoes</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="pizza-sizes">
+                                        <small class="text-muted">Small: $13.99 | Medium: $15.99 | Large: $17.99</small>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="btn-group w-100" role="group">
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Garden Veggie Deluxe" data-price="13.99" data-size="Small">Small</button>
+                                        <button class="btn btn-red btn-sm add-to-cart" data-name="Garden Veggie Deluxe" data-price="15.99" data-size="Medium">Medium</button>
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Garden Veggie Deluxe" data-price="17.99" data-size="Large">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1590534602159-c72311b5f7ef?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Meat Lovers Pizza">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title fw-bold">Meat Lovers Feast</h5>
+                                    <span class="badge bg-danger">Spicy</span>
+                                </div>
+                                <p class="card-text text-gray-600 mb-3">Pepperoni, sausage, ham, bacon, ground beef</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="pizza-sizes">
+                                        <small class="text-muted">Small: $16.99 | Medium: $19.99 | Large: $22.99</small>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="btn-group w-100" role="group">
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Meat Lovers Feast" data-price="16.99" data-size="Small">Small</button>
+                                        <button class="btn btn-red btn-sm add-to-cart" data-name="Meat Lovers Feast" data-price="19.99" data-size="Medium">Medium</button>
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Meat Lovers Feast" data-price="22.99" data-size="Large">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Hawaiian Pizza">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title fw-bold">Tropical Hawaiian</h5>
+                                    <span class="badge bg-info">Sweet</span>
+                                </div>
+                                <p class="card-text text-gray-600 mb-3">Ham, pineapple, mozzarella, tomato sauce</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="pizza-sizes">
+                                        <small class="text-muted">Small: $14.99 | Medium: $16.99 | Large: $18.99</small>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="btn-group w-100" role="group">
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Tropical Hawaiian" data-price="14.99" data-size="Small">Small</button>
+                                        <button class="btn btn-red btn-sm add-to-cart" data-name="Tropical Hawaiian" data-price="16.99" data-size="Medium">Medium</button>
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="Tropical Hawaiian" data-price="18.99" data-size="Large">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="BBQ Chicken Pizza">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title fw-bold">BBQ Chicken Ranch</h5>
+                                    <span class="badge bg-warning text-dark">Chef's Choice</span>
+                                </div>
+                                <p class="card-text text-gray-600 mb-3">Grilled chicken, BBQ sauce, red onions, cilantro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="pizza-sizes">
+                                        <small class="text-muted">Small: $15.99 | Medium: $17.99 | Large: $19.99</small>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="btn-group w-100" role="group">
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="BBQ Chicken Ranch" data-price="15.99" data-size="Small">Small</button>
+                                        <button class="btn btn-red btn-sm add-to-cart" data-name="BBQ Chicken Ranch" data-price="17.99" data-size="Medium">Medium</button>
+                                        <button class="btn btn-outline-red btn-sm add-to-cart" data-name="BBQ Chicken Ranch" data-price="19.99" data-size="Large">Large</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appetizers Section -->
+            <div class="menu-category" data-category="appetizers">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center" id="appetizers">
+                    <i class="fas fa-utensils text-red-600 me-3"></i>Appetizers
+                </h2>
+                <div class="row g-4 mb-12">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Garlic Bread">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Garlic Breadsticks</h5>
+                                <p class="card-text text-gray-600">Fresh baked breadsticks with garlic butter</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$6.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Garlic Breadsticks" data-price="6.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1566740933430-b5e70b06d2d5?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Mozzarella Sticks">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Mozzarella Sticks</h5>
+                                <p class="card-text text-gray-600">Crispy breaded mozzarella with marinara</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$8.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Mozzarella Sticks" data-price="8.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Chicken Wings">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Buffalo Wings</h5>
+                                <p class="card-text text-gray-600">Spicy buffalo wings with ranch dip</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$10.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Buffalo Wings" data-price="10.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks Section -->
+            <div class="menu-category" data-category="drinks">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center" id="drinks">
+                    <i class="fas fa-glass-cheers text-red-600 me-3"></i>Beverages
+                </h2>
+                <div class="row g-4 mb-12">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <div class="card-body text-center">
+                                <i class="fas fa-wine-bottle text-red-600 text-4xl mb-3"></i>
+                                <h5 class="card-title fw-bold">Soft Drinks</h5>
+                                <p class="card-text text-gray-600">Coke, Pepsi, Sprite, Orange</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$2.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Soft Drink" data-price="2.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <div class="card-body text-center">
+                                <i class="fas fa-tint text-blue-600 text-4xl mb-3"></i>
+                                <h5 class="card-title fw-bold">Bottled Water</h5>
+                                <p class="card-text text-gray-600">Premium spring water</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$1.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Bottled Water" data-price="1.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <div class="card-body text-center">
+                                <i class="fas fa-coffee text-brown text-4xl mb-3"></i>
+                                <h5 class="card-title fw-bold">Iced Tea</h5>
+                                <p class="card-text text-gray-600">Refreshing sweet tea</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$2.49</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Iced Tea" data-price="2.49">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <div class="card-body text-center">
+                                <i class="fas fa-glass text-orange-600 text-4xl mb-3"></i>
+                                <h5 class="card-title fw-bold">Fresh Juice</h5>
+                                <p class="card-text text-gray-600">Orange, Apple, Cranberry</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$3.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Fresh Juice" data-price="3.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <div class="menu-category" data-category="desserts">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center" id="desserts">
+                    <i class="fas fa-birthday-cake text-red-600 me-3"></i>Sweet Treats
+                </h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Chocolate Cake">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Chocolate Lava Cake</h5>
+                                <p class="card-text text-gray-600">Warm chocolate cake with vanilla ice cream</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$6.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Chocolate Lava Cake" data-price="6.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Cheesecake">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">New York Cheesecake</h5>
+                                <p class="card-text text-gray-600">Classic cheesecake with berry topping</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$5.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="New York Cheesecake" data-price="5.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-lg h-100 menu-item">
+                            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400&h=300&fit=crop" 
+                                 class="card-img-top" alt="Ice Cream">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Gelato Scoop</h5>
+                                <p class="card-text text-gray-600">Vanilla, Chocolate, or Strawberry</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0 text-red-600 fw-bold">$4.99</span>
+                                    <button class="btn btn-red btn-sm add-to-cart" data-name="Gelato Scoop" data-price="4.99">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-pizza-slice me-2"></i>PizzaExpress
+                    </h5>
+                    <p class="text-gray-400">Delivering happiness, one pizza at a time.</p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <a href="cart.html" class="btn btn-red btn-lg">
+                            <i class="fas fa-shopping-cart me-2"></i>View Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

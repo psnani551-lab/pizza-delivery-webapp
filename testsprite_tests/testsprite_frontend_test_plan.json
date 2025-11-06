@@ -1,0 +1,487 @@
+[
+  {
+    "id": "TC001",
+    "title": "Homepage Visual and Functional Elements",
+    "description": "Verify the homepage loads correctly with hero section, featured pizzas, company info, and location finder modal accessible and functional.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the homepage (index.html)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the hero section is displayed with correct images and text."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the featured pizzas section is visible with correct items and images."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify company info section is present and correctly formatted."
+      },
+      {
+        "type": "action",
+        "description": "Open the location finder modal."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the location finder modal opens and displays location selection or map."
+      },
+      {
+        "type": "action",
+        "description": "Close the location finder modal."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the modal closes without errors."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Menu Navigation and Filtering",
+    "description": "Ensure users can navigate to menu, filter by category, and select pizza sizes successfully.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the menu page (menu.html)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all menu categories (Pizzas, Appetizers, Drinks, Desserts) are displayed."
+      },
+      {
+        "type": "action",
+        "description": "Filter menu items by category 'Pizzas'."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify only pizza items are shown after filtering."
+      },
+      {
+        "type": "action",
+        "description": "Select different pizza size options for an item."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify size selection updates price accordingly."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Add to Cart Functionality with Size and Quantity",
+    "description": "Verify items with selected sizes can be added to the cart with accurate quantity and price calculation.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "On menu page, select a pizza item and choose size 'Medium'."
+      },
+      {
+        "type": "action",
+        "description": "Add item to cart with quantity 2."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart counter in navigation updates to reflect added items."
+      },
+      {
+        "type": "action",
+        "description": "Open the cart page (cart.html)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart contains the selected pizza with size 'Medium' and quantity 2."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the displayed price matches the calculation based on size and quantity."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Shopping Cart Item Modification and Removal",
+    "description": "Validate modifying quantity updates the price correctly and items can be removed from the cart.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "On cart page, increase quantity of an existing item."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the price and order summary update to reflect new quantity."
+      },
+      {
+        "type": "action",
+        "description": "Decrease quantity back to 1."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updated price reflects the reduced quantity."
+      },
+      {
+        "type": "action",
+        "description": "Remove an item from the cart."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the item is removed and cart summary updates."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Promo Code Validation and Discount Application",
+    "description": "Check promo codes can be input, validated, and discount is correctly applied in cart summary.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "On cart page, enter valid promo code."
+      },
+      {
+        "type": "action",
+        "description": "Apply promo code."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify promo code is accepted and discount appears in order summary."
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid promo code."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to apply invalid promo code."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify error message is shown and no discount applied."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Checkout Form Validation and Submission",
+    "description": "Validate customer info, delivery address, and payment details inputs prevent invalid data and allow order submission on valid input.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Proceed to checkout modal from cart page."
+      },
+      {
+        "type": "action",
+        "description": "Submit empty customer info form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation errors are shown for required fields."
+      },
+      {
+        "type": "action",
+        "description": "Input invalid customer phone and payment card numbers."
+      },
+      {
+        "type": "action",
+        "description": "Attempt form submission."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation messages prevent submission."
+      },
+      {
+        "type": "action",
+        "description": "Input valid customer, delivery, and payment details."
+      },
+      {
+        "type": "action",
+        "description": "Submit the checkout form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order confirmation modal appears confirming successful order placement."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Order Confirmation and Lookup Functionality",
+    "description": "Verify order confirmation modal shows after checkout and order lookup via number and phone works with validation.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Complete a purchase to trigger the order success modal."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order confirmation modal details the order number and next steps."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to order tracking page (order-tracking.html)."
+      },
+      {
+        "type": "action",
+        "description": "Submit empty order lookup form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation errors are displayed."
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid order number or phone format."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to lookup order."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation prevents lookup."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid order number and associated phone."
+      },
+      {
+        "type": "action",
+        "description": "Submit order lookup."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order status and delivery info is displayed correctly with progress steps."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Real-Time Order Status Progression Display",
+    "description": "Ensure order tracking shows correct progressive steps from order confirmation to delivery with driver details when available.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Using a valid order lookup, view real-time status page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order progress is displayed as a step-by-step visual with correct current step highlighted."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify delivery driver info is shown if order is out for delivery."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify status updates dynamically as order moves through stages."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Local Storage Cart Persistence Across Sessions",
+    "description": "Confirm that cart data persists in local storage across page reloads and user sessions and is consistent across pages.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Add items to cart with selected sizes and quantities."
+      },
+      {
+        "type": "action",
+        "description": "Reload the page or navigate away and back to the cart page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart contents are restored correctly from local storage."
+      },
+      {
+        "type": "action",
+        "description": "Navigate between pages (e.g., menu.html to cart.html)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart status and counter remain correct and up to date."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Responsive Navigation Bar Functionality and Styling",
+    "description": "Verify the navigation bar is responsive, the cart item counter updates, menu collapses on narrow screens, and active page highlighting works.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Resize viewport to simulate desktop and mobile screen sizes."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the navigation bar adapts to mobile width with collapsible menu."
+      },
+      {
+        "type": "action",
+        "description": "Click the menu toggle on mobile view."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify menu expands and collapses properly."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart icon displays the correct number of items consistently."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to different pages and observe the active page indicator in the navigation bar."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the correct menu item is highlighted as active for the current page."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Modal Components Open and Close Behavior",
+    "description": "Test that all interactive modals including location finder, checkout, and order success open and close properly and are responsive.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the location finder modal from homepage."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify modal appears and contents are interactive."
+      },
+      {
+        "type": "action",
+        "description": "Close the location finder modal."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify modal closes without errors."
+      },
+      {
+        "type": "action",
+        "description": "During checkout, open the checkout modal."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify checkout modal is interactive and responsive."
+      },
+      {
+        "type": "action",
+        "description": "Cancel or close the checkout modal."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify modal closes and no partial data causes errors."
+      },
+      {
+        "type": "action",
+        "description": "After order submission, confirm the order success modal appears."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify modal contains order details and can be dismissed properly."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Form Validation Edge Cases",
+    "description": "Verify input validation prevents submission of incorrect or malformed input in customer details, payment info, and order tracking forms including boundary and empty inputs.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Attempt to submit customer info form with only whitespace."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify input is rejected as invalid."
+      },
+      {
+        "type": "action",
+        "description": "Enter partial credit card number and submit payment form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify invalid payment details cause form rejection."
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid postal codes or phone numbers in delivery address."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation captures these errors."
+      },
+      {
+        "type": "action",
+        "description": "Enter excessively long inputs for text fields and submit."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify application either handles gracefully or shows validation errors."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Error Handling on Invalid Promo Codes",
+    "description": "Ensure entering unknown or expired promo codes results in proper user feedback and no system errors.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Enter an expired promo code."
+      },
+      {
+        "type": "action",
+        "description": "Apply promo code."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify error message informs user that promo code is expired."
+      },
+      {
+        "type": "action",
+        "description": "Enter a promo code with invalid characters."
+      },
+      {
+        "type": "action",
+        "description": "Apply promo code."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify error message about invalid promo code format."
+      }
+    ]
+  }
+]

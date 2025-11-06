@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:8080",
+  "executionArgs": {
+    "projectName": "pizza-delivery-website",
+    "projectPath": "/Users/nani/hackathon/pizza delivery website",
+    "testIds": [],
+    "additionalInstruction": "Server is now running properly at localhost:8080. Please re-execute all tests since the previous connectivity issues have been resolved. Test all major functionality including homepage UI, menu navigation, cart management, checkout process, order tracking, and responsive design.",
+    "envs": {
+      "API_KEY": "sk-user-vxSfu6X3a4vjDssCIZCV_WQeafvoerLojWEDhUHoP3ukcXDigGElUrrcSHHOdh9G4yFttjtbuB0vp7QPFchoVGy-hRdyBw4exY_rxvAwamnXiuoZ7kqX3GZox1WnsW1Owew"
+    }
+  },
+  "proxy": "http://cfd16184-7680-4945-9832-3b875722329a:0OqHFqrI70v0QXju771uDrFK4V0jHU55@tun.testsprite.com:8080"
+}

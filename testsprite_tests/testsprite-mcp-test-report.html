@@ -1,0 +1,413 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Markdown Preview</title>
+      <style>
+        body {
+          font-family: sans-serif;
+          padding: 40px;
+          line-height: 1.6;
+          background: #fdfdfd;
+          color: #333;
+        }
+        pre {
+          background: #f4f4f4;
+          padding: 10px;
+          border-radius: 5px;
+          overflow-x: auto;
+        }
+        code {
+          font-family: monospace;
+          background: #eee;
+          padding: 2px 4px;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-top: 20px;
+        }
+        th, td {
+          border: 1px solid #ccc;
+          padding: 8px 12px;
+          text-align: left;
+        }
+        th {
+          background-color: #f2f2f2;
+          font-weight: bold;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>TestSprite AI Testing Report (MCP)</h1>
+<hr>
+<h2>1️⃣ Document Metadata</h2>
+<ul>
+<li><strong>Project Name:</strong> pizza-delivery-website</li>
+<li><strong>Version:</strong> 1.0.0</li>
+<li><strong>Date:</strong> 2025-09-21</li>
+<li><strong>Prepared by:</strong> TestSprite AI Team</li>
+</ul>
+<hr>
+<h2>2️⃣ Critical Finding: Application Accessibility Issue</h2>
+<p>⚠️ <strong>CRITICAL</strong>: All tests failed due to a server connectivity issue. The application at <code>http://localhost:8080/</code> returned <code>net::ERR_EMPTY_RESPONSE</code>, preventing any functional testing.</p>
+<p><strong>Immediate Action Required</strong>: Resolve server configuration or network connectivity issues before proceeding with functional testing.</p>
+<hr>
+<h2>3️⃣ Requirement Validation Summary</h2>
+<h3>Requirement: Homepage UI</h3>
+<ul>
+<li><strong>Description:</strong> Main landing page with hero section, featured pizzas, company features, and location finder modal.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC001</li>
+<li><strong>Test Name:</strong> Homepage Visual and Functional Elements</li>
+<li><strong>Test Code:</strong> <a href="./TC001_Homepage_Visual_and_Functional_Elements.py">TC001_Homepage_Visual_and_Functional_Elements.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/8f3c8982-6206-4b46-b778-5411c481ce51">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> The test failed because the application homepage did not load due to a network error, preventing frontend elements like the hero section, featured pizzas, and location finder modal from rendering and functioning.</li>
+</ul>
+<hr>
+<h3>Requirement: Menu UI Component</h3>
+<ul>
+<li><strong>Description:</strong> Complete menu display with categorized items, filtering functionality, and size selection.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC002</li>
+<li><strong>Test Name:</strong> Menu Navigation and Filtering</li>
+<li><strong>Test Code:</strong> <a href="./TC002_Menu_Navigation_and_Filtering.py">TC002_Menu_Navigation_and_Filtering.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/052d7550-ab20-46dd-ba88-99cecbab959f">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> The failure to load the starting URL prevented any navigation or interaction with the menu component, including filtering by category and selecting pizza sizes.</li>
+</ul>
+<hr>
+<h3>Requirement: Add to Cart Feature</h3>
+<ul>
+<li><strong>Description:</strong> Items with selected sizes can be added to the cart with accurate quantity and price calculation.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC003</li>
+<li><strong>Test Name:</strong> Add to Cart Functionality with Size and Quantity</li>
+<li><strong>Test Code:</strong> <a href="./TC003_Add_to_Cart_Functionality_with_Size_and_Quantity.py">TC003_Add_to_Cart_Functionality_with_Size_and_Quantity.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/cd165536-9486-4145-a769-ec818697c06c">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Test cannot verify add to cart functionality with size and quantity because the initial page did not load, preventing interaction with product selection and cart updates.</li>
+</ul>
+<hr>
+<h3>Requirement: Shopping Cart UI</h3>
+<ul>
+<li><strong>Description:</strong> Cart item management, quantity updates, and item removal functionality.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC004</li>
+<li><strong>Test Name:</strong> Shopping Cart Item Modification and Removal</li>
+<li><strong>Test Code:</strong> <a href="./TC004_Shopping_Cart_Item_Modification_and_Removal.py">TC004_Shopping_Cart_Item_Modification_and_Removal.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/e3b92f21-92f3-455c-a5e6-a6a18a216c4a">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Shopping cart modifications and item removal tests failed due to inability to access the application from the start URL, stopping the functional verification.</li>
+</ul>
+<hr>
+<h3>Requirement: Promo Code UI Module</h3>
+<ul>
+<li><strong>Description:</strong> Promo code input, validation, and discount application functionality.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC005</li>
+<li><strong>Test Name:</strong> Promo Code Validation and Discount Application</li>
+<li><strong>Test Code:</strong> <a href="./TC005_Promo_Code_Validation_and_Discount_Application.py">TC005_Promo_Code_Validation_and_Discount_Application.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/8e6131db-56e5-4f16-ac08-6ea5e48a5f22">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Promo code input, validation, and discount application could not be tested because the page did not load, blocking access to cart and promo code components.</li>
+</ul>
+<h4>Test 2</h4>
+<ul>
+<li><strong>Test ID:</strong> TC013</li>
+<li><strong>Test Name:</strong> Error Handling on Invalid Promo Codes</li>
+<li><strong>Test Code:</strong> <a href="./TC013_Error_Handling_on_Invalid_Promo_Codes.py">TC013_Error_Handling_on_Invalid_Promo_Codes.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/43965d5c-a825-4d23-b044-25bf36839602">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> The system's error handling for invalid or expired promo codes couldn't be tested as the page failed to load, preventing user interaction with promo code input fields.</li>
+</ul>
+<hr>
+<h3>Requirement: CheckoutForm Component</h3>
+<ul>
+<li><strong>Description:</strong> Customer information validation, delivery address input, and payment details processing.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC006</li>
+<li><strong>Test Name:</strong> Checkout Form Validation and Submission</li>
+<li><strong>Test Code:</strong> <a href="./TC006_Checkout_Form_Validation_and_Submission.py">TC006_Checkout_Form_Validation_and_Submission.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/16426f99-bf79-491c-8b5e-3ac235245929">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Checkout form validation and submission failed due to the site being unreachable at the start URL, preventing any user input in customer info, delivery, or payment forms.</li>
+</ul>
+<hr>
+<h3>Requirement: Order Confirmation &amp; Lookup UI</h3>
+<ul>
+<li><strong>Description:</strong> Order confirmation modal display and order lookup functionality with validation.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC007</li>
+<li><strong>Test Name:</strong> Order Confirmation and Lookup Functionality</li>
+<li><strong>Test Code:</strong> <a href="./TC007_Order_Confirmation_and_Lookup_Functionality.py">TC007_Order_Confirmation_and_Lookup_Functionality.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/83076d2e-ef9e-4cc2-bf76-dfb72261013e">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Order confirmation modal display and order lookup functionality could not be tested as the application did not load, blocking access to order processing components.</li>
+</ul>
+<hr>
+<h3>Requirement: Order Tracking UI Feature</h3>
+<ul>
+<li><strong>Description:</strong> Real-time order status progression display with driver details when available.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC008</li>
+<li><strong>Test Name:</strong> Real-Time Order Status Progression Display</li>
+<li><strong>Test Code:</strong> <a href="./TC008_Real_Time_Order_Status_Progression_Display.py">TC008_Real_Time_Order_Status_Progression_Display.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/19096cca-d944-4a8e-9dc0-40b490925c7d">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Real-time order status progression and driver details display tests were blocked by failure to load the application, preventing interaction with order tracking components.</li>
+</ul>
+<hr>
+<h3>Requirement: Cart Persistence (Local Storage) Feature</h3>
+<ul>
+<li><strong>Description:</strong> Cart data persistence across page reloads and user sessions.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC009</li>
+<li><strong>Test Name:</strong> Local Storage Cart Persistence Across Sessions</li>
+<li><strong>Test Code:</strong> <a href="./TC009_Local_Storage_Cart_Persistence_Across_Sessions.py">TC009_Local_Storage_Cart_Persistence_Across_Sessions.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/da983a96-f400-4344-8431-3e841e3617b5">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> The test for cart persistence in local storage across sessions failed because the application did not load, disallowing data storage or retrieval in the frontend.</li>
+</ul>
+<hr>
+<h3>Requirement: Navigation Bar UI</h3>
+<ul>
+<li><strong>Description:</strong> Responsive navigation with cart counter updates and mobile-friendly collapsible menu.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC010</li>
+<li><strong>Test Name:</strong> Responsive Navigation Bar Functionality and Styling</li>
+<li><strong>Test Code:</strong> <a href="./TC010_Responsive_Navigation_Bar_Functionality_and_Styling.py">TC010_Responsive_Navigation_Bar_Functionality_and_Styling.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/50d389a5-d4fa-4e93-af35-e41285ef54ea">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Responsive navigation bar functionality and styling test failed due to inability to load the main page, preventing verification of responsive behavior and dynamic cart counters.</li>
+</ul>
+<hr>
+<h3>Requirement: Modal Components</h3>
+<ul>
+<li><strong>Description:</strong> Interactive modals including location finder, checkout, and order success with proper open/close behavior.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC011</li>
+<li><strong>Test Name:</strong> Modal Components Open and Close Behavior</li>
+<li><strong>Test Code:</strong> <a href="./TC011_Modal_Components_Open_and_Close_Behavior.py">TC011_Modal_Components_Open_and_Close_Behavior.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/1b6885c9-435c-4a1f-81ff-b2ba9eeb3be9">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Modal open/close behavior tests failed because the application page did not load, making all modal components inaccessible.</li>
+</ul>
+<hr>
+<h3>Requirement: Form Validation Module</h3>
+<ul>
+<li><strong>Description:</strong> Input validation for customer details, payment info, and order tracking forms with proper error handling.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC012</li>
+<li><strong>Test Name:</strong> Form Validation Edge Cases</li>
+<li><strong>Test Code:</strong> <a href="./TC012_Form_Validation_Edge_Cases.py">TC012_Form_Validation_Edge_Cases.py</a></li>
+<li><strong>Test Error:</strong> Failed to go to the start URL. Err: Error executing action go_to_url: Page.goto: net::ERR_EMPTY_RESPONSE at http://localhost:8080/</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/555e0d92-35cd-4185-a39f-a9901c44951f/d2f12ba8-2325-470e-b127-cd0ab7d34b4e">View Test Details</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Analysis / Findings:</strong> Form validation tests for edge cases could not be executed due to application load failure, preventing input validation checks on customer details, payment, and order tracking forms.</li>
+</ul>
+<hr>
+<h2>4️⃣ Coverage &amp; Matching Metrics</h2>
+<ul>
+<li><strong>0% of product requirements successfully tested</strong></li>
+<li><strong>0% of tests passed</strong></li>
+<li><strong>Key gaps / risks:</strong></li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>CRITICAL ISSUE</strong>: 0% of product requirements had successful test execution due to server connectivity failure.<br>
+All 13 test cases failed with the same root cause: <code>net::ERR_EMPTY_RESPONSE</code> at http://localhost:8080/<br>
+<strong>Primary Risk</strong>: Complete inability to validate any functionality until server accessibility is resolved.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Total Tests</th>
+<th>✅ Passed</th>
+<th>⚠️ Partial</th>
+<th>❌ Failed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Homepage UI</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Menu UI Component</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Add to Cart Feature</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Shopping Cart UI</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Promo Code UI Module</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CheckoutForm Component</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order Confirmation &amp; Lookup UI</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order Tracking UI Feature</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cart Persistence Feature</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Navigation Bar UI</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Modal Components</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Form Validation Module</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>TOTALS</strong></td>
+<td><strong>13</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>13</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>5️⃣ Recommendations</h2>
+<h3>Immediate Actions Required</h3>
+<ol>
+<li>
+<p><strong>Fix Server Connectivity</strong></p>
+<ul>
+<li>Investigate why the Python HTTP server is not responding properly</li>
+<li>Verify the server is running and accessible at <code>http://localhost:8080/</code></li>
+<li>Check for port conflicts or firewall issues</li>
+<li>Test manual browser access to confirm server functionality</li>
+</ul>
+</li>
+<li>
+<p><strong>Re-run TestSprite Testing</strong></p>
+<ul>
+<li>Once server connectivity is resolved, re-execute the full test suite</li>
+<li>All 13 test cases are ready to run and will provide comprehensive coverage</li>
+</ul>
+</li>
+</ol>
+<h3>Expected Test Coverage (Once Server Issues Resolved)</h3>
+<p>The generated test suite will comprehensively validate:</p>
+<ul>
+<li>✅ <strong>UI Components</strong>: Homepage, menu, cart, navigation</li>
+<li>✅ <strong>User Interactions</strong>: Add to cart, checkout, order tracking</li>
+<li>✅ <strong>Data Persistence</strong>: Local storage functionality</li>
+<li>✅ <strong>Form Validation</strong>: Customer info, payment, order lookup</li>
+<li>✅ <strong>Responsive Design</strong>: Mobile and desktop compatibility</li>
+<li>✅ <strong>Error Handling</strong>: Invalid inputs and edge cases</li>
+</ul>
+<hr>
+<p><strong>Next Steps</strong>: Resolve server connectivity issues and re-run TestSprite for complete functional validation of your pizza delivery website.</p>
+
+    </body>
+    </html>
+  
